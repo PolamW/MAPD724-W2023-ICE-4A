@@ -27,21 +27,21 @@
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKk-PX-QrA" userLabel="LivesLabel">
-                                <rect key="frame" x="286.66666666666669" y="59" width="123.33333333333331" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: 99999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKk-PX-QrA" userLabel="LivesLabel">
+                                <rect key="frame" x="220" y="59" width="190" height="21"/>
                                 <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play  Mail Pilot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q16-4P-l7c" userLabel="StartLabel">
-                                <rect key="frame" x="25" y="153" width="380" height="167"/>
+                                <rect key="frame" x="20" y="251" width="380" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="80"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axT-9I-bxz">
-                                <rect key="frame" x="152" y="420" width="126" height="65"/>
+                                <rect key="frame" x="152" y="619" width="126" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start!">
@@ -52,6 +52,25 @@
                                     <action selector="startButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="pYP-OF-l8s"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-eS-qlV">
+                                <rect key="frame" x="126" y="625" width="178" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="36"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="FR5-8u-eWW"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m6-bu-rbx">
+                                <rect key="frame" x="20" y="251" width="390" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="70"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,8 +82,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EndLabel" destination="1m6-bu-rbx" id="7AP-ns-wPI"/>
                         <outlet property="LivesLabel" destination="gMA-mx-C5v" id="hbq-pg-1LQ"/>
+                        <outlet property="RestartButton" destination="zKb-eS-qlV" id="tkM-PT-Qm4"/>
                         <outlet property="ScoreLabel" destination="VKk-PX-QrA" id="EMi-Ud-aoc"/>
+                        <outlet property="StartButton" destination="axT-9I-bxz" id="Dh8-gL-A5q"/>
+                        <outlet property="StartLabel" destination="Q16-4P-l7c" id="v08-hm-blc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
